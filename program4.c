@@ -1,11 +1,23 @@
 #include <stdio.h>
 main()
 {
-	printf("give 5 subject marks");
-	int marks_1,marks_2,marks_3,marks_4,marks_5;
-	scanf("\n%d%d%d%d%d",&marks_1,&marks_2,&marks_3,&marks_4,&marks_5);
-	int sum = marks_1+marks_2+marks_3+marks_4+marks_5;
-	float avg = sum/5;
-	printf("\nAverage=%f",avg);
-	
+	printf("enter coordinates x and y");
+	int x,y;
+	scanf("\n%d\n%d",&x,&y);
+	if(x>0 && y>0)
+	{
+		printf("first Quadrant");
+	}
+	if(x>0 && y<0)
+	{
+		printf("fourth Quadrant");
+	}
+	if(x<0 && y>0)
+	{
+		printf("second Quadrant");
+	}
+	if(x<0 && y<0)
+	{
+		printf("Third Quadrant");
+	}
 }

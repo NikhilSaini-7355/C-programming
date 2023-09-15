@@ -1,13 +1,26 @@
 #include <stdio.h>
 main()
 {
-	printf("Input length in metres,weight in kg,Volume in litres");
-	float length,weight,volume;
-	scanf("\n%f%f%f",&length,&weight,&volume);
-	float newlength = length*3.280;
-     float newweight = weight*2.204;
-     float newVolume = volume*0.219;
-     printf("\nlength in feet=%f",newlength);
-     printf("\nlength in pound=%f",newweight);
-	 printf("\nlength in gallons=%f",newVolume);	
+	float angle_1,angle_2,angle_3;
+	printf("enter the three angles\n");
+	scanf("%f\n%f\n%f",&angle_1,&angle_2,&angle_3);
+	if(angle_1+angle_2+angle_3 == 180.0)
+	{
+	
+	if(angle_1==60.0 && angle_2==60.0 && angle_3==60.0 )
+	printf("equilateral triangle");
+	else if((angle_1==angle_2) || (angle_3==angle_2) || (angle_1==angle_3))
+	{
+		printf("Isosceles triangle");
+	}
+	else
+	{
+		printf("Scalene triangle");
+	}
+}
+else
+{
+	printf("given angles can not form a triangle");
+}
+	
 }

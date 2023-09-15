@@ -1,13 +1,31 @@
 #include <stdio.h>
 main()
-{ printf("enter amount in INR");
-float amount,usd_amt,cnd_amt,pkr_amt;
-scanf("%f",&amount);
-usd_amt = amount*0.012;
-cnd_amt = amount*0.016;
-pkr_amt = amount*3.56;
-printf("\nAmount in INR=%f",amount);
-printf("\nAmount in USD=%f",usd_amt);
-printf("\nAmount in CND=%f",cnd_amt);
-printf("\nAmount in PKR=%f",pkr_amt);
+{
+	printf("enter temperature in celsius");
+	int temperature;
+	scanf("%d",&temperature);
+	if(temperature<0)
+	{
+		printf("freezing weather");
+	}
+	if(temperature>=0 && temperature<10)
+	{
+		printf("very cold weather");
+	}
+	if(temperature>=10 && temperature<20)
+	{
+		printf("cold weather");
+	}
+	if(temperature>=20 && temperature<30)
+	{
+		printf("Normal weather");
+	}
+    if(temperature>=30 && temperature<40)
+	{
+		printf("Hot weather");
+	}
+	if(temperature>=40)
+	{
+		printf("Very Hot weather");
+	}	
 }

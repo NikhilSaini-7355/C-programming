@@ -1,38 +1,41 @@
 #include <stdio.h>
 main()
 {
-	printf("Input employeeId and annual salary");
-	int id; float salary; float deduction=0.0;
-	scanf("\n%d%f",&id,&salary);
-	if(salary>0.0 && salary<300000.0)
-	{  printf("no ded");
-		deduction =0.0;
-	}
-	else if(salary>=300000.0 && salary<600000.0)
-	{   printf("hello");
-		deduction =((float)5/100)*salary;
-		printf("%f",deduction);
-	}
-	else if(salary>=600000.0 && salary<900000.0)
+	printf("input three numbers");
+	float num_1,num_2,num_3;
+	scanf("\n%f\n%f\n%f",&num_1,&num_2,&num_3);
+	if(num_1>num_2)
 	{
-		deduction =((float)10/100)*salary;
+		if(num_3>num_1)
+		{
+			printf("largest number is %f",num_3);
+		}
+		else
+		{
+			printf("largest number is %f",num_1);
+		}
 	}
-	else if(salary>=900000.0 && salary<1200000.0)
+	else if(num_3>num_2)
 	{
-		deduction =((float)15/100)*salary;
+		if(num_1>num_3)
+		{
+			printf("largest number is %f",num_1);
+		}
+		else
+		{
+			printf("largest number is %f",num_3);
+		}
 	}
-	else if(salary>=1200000.0 && salary<1500000.0)
+	if(num_2>num_1)
 	{
-		deduction =((float)20/100)*salary;
+		if(num_3>num_2)
+		{
+			printf("largest number is %f",num_3);
+		}
+		else
+		{
+			printf("largest number is %f",num_2);
+		}
 	}
-	else if(salary>=1500000.0)
-	{
-		deduction =((float)30/100)*salary;
-	}
-	printf("\nemployeeId=%d",id);
-	float netsalary = salary - deduction;
-	printf("\nsalary=%f",salary);
-	printf("\ndeduction=%f",deduction);
-	printf("\nnetsalary=%f",netsalary);
 	
 }
